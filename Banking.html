@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Banking.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div>
+                <img class="logo" src="logo.png" alt="">
+                <h1>Welcome to 24*7 Banking</h1>
+                <small>We power your Dreams</small>
+                <!-- Collapse Source code -->
+                <a href="HomePage.html"><button type="button" class="collapsible" style="cursor: pointer;" >  Logout  </button></a>
+
+                <!-- Collapse end -->
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <h2>Online Bank Transaction</h2>
+        <div class="col-1 menu">
+            <table class="tran">
+                <tr> <td>Amount Transaction</td> </tr><br>
+                <tr><td><input class="tranin" type="text" name="" id="amount" onfocus="this.value=''" value="Enter amt in ₹"></td></tr>
+                <tr><td><select class="tranin" name="" id="option">
+                    <option class="tranin" value="-Transaction-">-Transaction-</option>
+                    <option class="tranin" value="Deposit">Deposit</option>
+                    <option class="tranin" value="Withdraw">Withdraw</option></select></td></tr>
+                    <tr><td><input class="tranin" type="text" name="" id="discription" onfocus="this.value=''" value="-Discription"></td></tr>
+                <tr><td><button class="tranbtn" onclick="return operation()">Process</button></td></tr>
+                <tr><td><span id="err" style="color: red;"></span></td></tr>
+            </table>
+        </div>
+        <div class="col-2">
+            <table class="bal">
+                <tr>
+                    <td colspan="2">Total Available Balance</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bolder;">₹ <span id="balance">0.0</span> /-  </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-3 right">
+            <div class="aside">
+                <table id="deposit">
+                    <tr>
+                        <th>Total Deposit</th>
+                        <th colspan="2" id="totalDeposit"></th>
+                    </tr>
+                    <tr>
+                        <td>Time-Date</td>
+                        <td>Rupees</td>
+                        <td>Discription</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-3 right">
+            <div class="aside">
+                <table id="withdraw">
+                    <tr>
+                        <th>Total Withdraw</th>
+                        <th colspan="2" id="totalWithdraw"></th>                
+                    </tr>
+                    <tr>
+                        <td>Time-Date</td>
+                        <td>Rupees</td>
+                        <td>Discription</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- End of Row -->
+    <div class="footer">
+        <table style="width: 100%; text-align: left;">
+            <tr>
+                <td>Adress: 24*7 BTM Bangalore</td>
+                <td>Copyright protected</td>
+                <td>Privacy and Policy</td>
+            </tr>
+            <tr>
+                <td>Mob: 9844818037</td>
+                <td>Right to Know</td>
+                <td>Report</td>
+            </tr>
+            <tr>
+                <td>Email Adress: info@247.com</td>
+            </tr>
+        </table>
+    </div>
+    <script src="Banking.js"></script>
+</body>
+
+</html>

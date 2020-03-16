@@ -1,0 +1,204 @@
+
+* {
+    box-sizing: border-box;
+  }
+html 
+{
+  font-family: "Lucida Sans", sans-serif;
+}
+
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  
+  .header {
+    background-image: linear-gradient(dodgerblue, blue);
+    color: #ffffff;
+    content: icon ;
+    padding: 5px 0px 50px 20px;
+    text-shadow: 5px 5px 5px gold;
+  }
+  .logo
+  {
+      height: 100px;
+      float: left;
+      position: relative;
+      padding-right: 15px;
+  }
+
+/* Amount Transation */
+  .tran
+  {
+    width: 100%;
+    text-align: center;
+  }
+  .tranin, .tranbtn, .tranin
+  {
+    text-align: center;
+    border: 2px solid dodgerblue;
+    border-radius: 10px;
+    font-size:large;
+    font-weight: bolder;
+    color: darkslategrey;
+    height: 30px;
+    width: 75%;
+    background-color: lightblue;
+}
+  .tranbtn
+  {
+    background-image: linear-gradient(to top ,blue, dodgerblue);
+    color: lightcyan;
+    cursor: pointer;
+    border-color: lightblue;
+  }
+  .tranbtn:hover
+  {
+    background-image: linear-gradient(to bottom, blue, dodgerblue);
+  }
+  .tranbtn:active
+  {
+    border-color: darkblue;
+  }
+
+  .tranin>option
+  {
+    text-align: center;
+    font-weight: normal;
+    color: black;
+  }
+
+
+  .aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  /* Available Balance */
+.bal td{
+  background-color: rgb(178, 235, 252);
+  font-size: x-large;
+  width: 100%;
+  text-align: left;
+
+}
+.bal td:first-child
+{
+  text-align: center;
+}
+.bal
+{
+  border-collapse: collapse;
+}
+.col-2
+{
+  background-image: linear-gradient(blue, dodgerblue, lightblue);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+  }
+  /* For desktop: */
+  .col-1 {width: 20%;}
+  .col-2 {width: 22%;}
+  .col-3 {width: 28%;}
+  
+  table{
+    width: 100%;
+    text-align: justify;
+  }
+
+  
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    .logo
+  {
+      height: 100px;
+  
+  }
+  .header {
+    background-image: linear-gradient(dodgerblue, blue);
+    color: #ffffff;
+    padding: 1px 5px 30px 5px;
+    height: fit-content;
+    text-shadow: 5px 5px 15px5px;
+  }
+}
+
+.black_overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+    -webkit-filter: alpha(opacity=80);
+}
+  .white_content {
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 25%;
+    height: 25%;
+    padding: 16px;
+    border: 16px solid orange;
+    background-color: white;
+    color: black;
+    z-index: 1002;
+    overflow: auto;
+  }
+  /* Collapse */
+  .collapsible {
+    background-image: linear-gradient(dodgerblue, rgb(0,0,60));
+    float: right;
+    cursor: pointer;
+    margin-right: 30px;
+    padding: 10px;
+    height: 5%;
+    width: fit-content;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    outline: none;
+    font-size: 15px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function dis(val)
+        {
+            document.getElementById("result").value+=val
+        }
+        function del()
+        {
+            let val =document.getElementById("result").value
+            let size=val.length-1
+            let rem=val.charAt(size)
+            let newval = val.replace(rem,'')
+            document.getElementById("result").value=newval
+
+        }
+
+        function solution()
+        {
+            let x = document.getElementById("result").value
+            let y = eval(x)
+            document.getElementById("result").value=y
+        }
+
+        function clean(a)
+        {
+            document.getElementById("result").value=a
+        }
+
+
+
+    </script>
+    <style>
+        input:active
+        {
+            background-image: linear-gradient(orangered, gold);
+        }
+        input:hover
+        {
+            border: solid orangered 5px;
+        }
+        input{
+            background-image: linear-gradient(yellow, orangered);
+            text-align: center;
+            border: solid orange 5px;
+            color: black;
+            border-radius: 5px;
+            margin-top: 5px;
+            width: 100%;
+            font-size: x-large;
+        }
+        #result{
+            background-image: linear-gradient(to left,white, rgb(255, 244, 180));
+            width: 97%;
+        }
+       body{
+            width: 100%;
+        }
+        div{
+            width: 100%;
+            align-items: center;
+            background-color: rgb(255, 208, 163);
+            border: solid orangered 10px;
+            border-radius: 5px;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: fit-content;
+        }
+        #head{
+            display: block;
+            font-size: 180%;
+            text-align: center;
+            text-shadow: maroon 5px 5px 5px;
+        }
+        #foot{
+            display: block;
+            text-align: right;
+        }
+        table
+        {
+            display: block;
+        
+        }
+        .operation
+        {
+            background-image: radial-gradient(dodgerblue, blue);
+            border: 5px solid blue;
+        }
+        .suboperation
+        {
+            background-image: radial-gradient(lightblue, dodgerblue);
+            border:5px solid dodgerblue;
+        }
+        .clear{
+            background-image: radial-gradient(yellow,red); 
+            border: solid red 5px;
+        }
+        .del{
+            background-image:linear-gradient(orangered,red); border: solid red 5px;
+        }
+    </style>
+    
+    <title>Calculator</title>
+</head>
+<body>
+    <div>
+       <p id="head">Creative Scout Calculator</p>
+       
+        <table>
+            <tr>
+                <td colspan="3"> <input type="text" id="result" style=" border: solid darkblue 5px"> </td>
+                <td><input class="del" type="button" value="del" onclick="del()" ></td>
+            </tr>
+            <tr>
+                <td><input class="suboperation" type="button" value="." onclick="dis('.')"></td>
+                <td><input class="suboperation" type="button" value="(" onclick="dis('(')"></td>
+                <td><input class="suboperation" type="button" value=")" onclick="dis(')')"></td>
+                <td><input class="operation" type="button" value="%" onclick="dis('%')" ></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="dis('7')"></td>
+                <td><input type="button" value="8" onclick="dis('8')"></td>
+                <td><input type="button" value="9" onclick="dis('9')"></td>
+                <td><input class="operation" type="button" value="+" onclick="dis('+')" ></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="dis('4')"></td>
+                <td><input type="button" value="5" onclick="dis('5')"></td>
+                <td><input type="button" value="6" onclick="dis('6')"></td>
+                <td><input class="operation" type="button" value="-" onclick="dis('-')" ></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="dis('1')"></td>
+                <td><input type="button" value="2" onclick="dis('2')"></td>
+                <td><input type="button" value="3" onclick="dis('3')"></td>
+                <td><input class="operation" type="button" value="x" onclick="dis('*')"></td>
+            </tr>
+            <tr>
+                <td><input class="clear" type="button" value="c" onclick="clean('')"></td>
+                <td><input type="button" value="0" onclick="dis('0')"></td>
+                <td><input type="button" value="=" onclick="solution()" style=" background-image: radial-gradient(lime, green); border: solid green 5px" ></td>
+                <td><input class="operation" type="button" value="/" onclick="dis('/')" ></td>
+            </tr>
+        </table>
+        <p id="foot">Created by - Akhilesh H N</p>
+    </div> 
+</body>
+</html>
